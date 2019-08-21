@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import DogsList from './DogsList'
 import Search from './Search'
-import { transactions } from '../transactionsData'
+import { dogs } from '../transactionsData'
 
 class DogsContainer extends Component {
 
     constructor() {
         super()
         this.state = {
-            transactions: transactions
+            dogs: dogs
         }
         // get a default state working with the data imported from TransactionsData
         // use this to get the functionality working

@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Immersive Code Challenge
 
-## Available Scripts
+## Instructions
 
-In the project directory, you can run:
+For this project, you’ll be building out a React application that displays a list of dogs.
 
-### `npm start`
+Part of what this code challenge is testing is your ability to follow given instructions. While you will definitely have a significant amount of freedom in how you implement the features, be sure to carefully read the directions for setting up the application.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+When you clone down this project, the component `<DogsContainer />` will be importing transactions from `src/dogssData`.  Use this data to get the functionality of the app working.  
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+ ## Deliverables
 
-### `npm test`
+**Please implement the following user stories:**
+- As a user, you should be able to see a table of dogs.
+- As a user, you should be able to enter text into an input field and dynamically filter the list of dogs by either description or category as you type.
+- As a user, when you click on the table header for "Description" or "Category", the table should render the dogs sorted by that criteria. (e.g. if you click "Description", the dogs should be sorted based on their description text.) Be sure that if a filter is being applied from your search, only the filtered dogs should be sorted.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*HINT* When comparing strings, take a look at `localeCompare`: [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)
 
-### `npm run build`
+![example project](https://s3-us-west-2.amazonaws.com/curriculum-content/immersive_assessments/react-challenge.gif)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Use the above gif as an example of how the app should function.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We’ve provided some starter code you can use to guide you, but feel free to create or remove components as you see fit.
 
-### `npm run eject`
+## Setup
+After cloning down the project
+- run `npm install`
+- You can boot up the server with `npm start`. It will run on `localhost:3000`.
+- The app uses [Semantic UI](https://semantic-ui.com/) for styling. If you see any unfamiliar classNames on some components, don't sweat! That's coming from Semantic UI and you shouldn't need to touch it.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Suggested Workflow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can approach this any way you would like but below is a reasonable approach to this challenge. If you are not sure where or how to begin, follow the steps here.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you are unfamiliar with HTML tables, take a look at the [docs with an example here](https://www.w3schools.com/html/html_tables.asp)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1) Get the list of dogs to display on the page. We're already doing the initial fetch for you, so all you have to do is figure how to render it.
+2) Ensure that the user typing into the input field at the top can appropriately update the state
+3) Using the state of the user input and the list of dogs, figure out how to render only the dogs that include the entered text in either the *description* or *category*
+4) We've attached a click event listener to the relevant headers of the table - that's where you will put the event handlers to implement sorting.
 
-## Learn More
+## Criteria
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We’ll be evaluating your code based on the following criteria:
+- **React Components:** Does the app reasonably separate responsibilities into components and a have a component hierarchy?
+- **Props:** Does the app have at least one presentational component that receives props? Does the app pass props down from a higher-level component to a lower one? Does the app make use of passing a functional prop?
+- **State:** Does the app have a search input that responds to changes and calls this.setState?
+- **Lifecycle Methods & API:** Does the app make an AJAX request to the API and return data? Does it set the state of the component within the app with that data within a lifecycle method?
+- **Feature:** Does the app filter the list of transactions?
+- Does the app follow best practices regarding state and component composition?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Good luck!
