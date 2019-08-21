@@ -4,17 +4,11 @@ import Search from './Search'
 import { dogs } from '../dogsData'
 
 class DogsContainer extends Component {
+    // get a default state working with the data imported from TransactionsData
+    // use this to get the functionality working
+    // then replace the default transactions with a call to the API
 
-    constructor() {
-        super()
-        this.state = {
 
-        }
-        // get a default state working with the data imported from TransactionsData
-        // use this to get the functionality working
-        // then replace the default transactions with a call to the API
-
-    }
 
 
     handleChange(event) {

@@ -5,7 +5,7 @@ const Search = () => {
         <div className="ui huge fluid icon input">
             <input
                 type="text"
-                placeholder={ "Search your Dogss" }
+                placeholder={ "Search your Dogs" }
             />
             <i className="circular search link icon"></i>
         </div>
