@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import DogsList from './DogsList'
 import Search from './Search'
-import { dogs } from '../transactionsData'
+import { dogs } from '../dogsData'
 
 class DogsContainer extends Component {
 
     constructor() {
         super()
         this.state = {
-            dogs: dogs
+
         }
         // get a default state working with the data imported from TransactionsData
         // use this to get the functionality working
@@ -22,7 +22,6 @@ class DogsContainer extends Component {
     }
 
     render() {
-        console.log("state", this.state.transactions)
         return (
             <div>
                 <Search />
