@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Dog = () => {
+const Dog = (props) => {
     return (
         <tr>
-            <td>{ "...your code here" }</td>
-            <td>{ "...your code here" }</td>
-            <td>{ "...your code here" }</td>
-            <td>{ "...your code here" }</td>
+            <td>{ props.dog.posted_at }</td>
+            <td>{ props.dog.description }</td>
+            <td>{ props.dog.category }</td>
+            <td>{ props.dog.amount }</td>
         </tr>
     )
 }

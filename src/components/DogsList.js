@@ -1,6 +1,28 @@
 import React from 'react'
+import Dog from './Dog'
 
-const DogsList = () => {
+const DogsList = (props) => {
+    console.log("doglist props", props)
+
+    const matchDescription = (dog) => {
+        return dog.description.toLowerCase().includes(props.input.toLowerCase())
+    }
+
+    const matchCategory = (dog) => {
+        return dog.category.toLowerCase().includes(props.input.toLowerCase())
+    }
+
+    const filteredDogsArray = () => {
+        let filteredDogs = props.dogs.filter(dog => {
+            return matchDescription(dog) || matchCategory(dog)
+        })
+
+        let dogsToDisplay = filteredDogs.map(dog => {
+            return <Dog key={ dog.id } dog={ dog } />
+        })
+        console.log("dogs to display", dogsToDisplay)
+        return dogsToDisplay
+    }
 
     return (
         <table className="ui celled striped padded table">
@@ -28,7 +50,7 @@ const DogsList = () => {
                     </th>
                 </tr>
 
-                { "... your code here..." }
+                { filteredDogsArray() }
 
             </tbody>
         </table>
